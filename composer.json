@@ -1,5 +1,5 @@
 {
-    "name": "sparkscoding/static-maps",
+    "name": "viszman/static-maps",
     "description": "A PHP library to make working with the Google Static Maps API a little more friendly.",
     "keywords": ["Google Static Map API", "Maps", "Map", "Google Maps", "Static Maps"],
     "type": "library",
