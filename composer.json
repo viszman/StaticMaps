@@ -18,5 +18,6 @@
         "psr-4": {
             "Viszman\\StaticMaps\\": "src"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
