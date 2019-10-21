@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "SparksCoding\\StaticMaps\\": "src"
+            "Viszman\\StaticMaps\\": "src"
         }
     }
 }
