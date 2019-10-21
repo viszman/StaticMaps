@@ -1,8 +1,8 @@
 <?php
 
-namespace SparksCoding\StaticMaps\Builders;
+namespace Viszman\StaticMaps\Builders;
 
-class GoogleStaticMapBuilder extends Builder implements BuilderInterface
+class GoogleStaticMapBuilder extends Builder
 {
     /**
      * Formats
@@ -107,8 +107,7 @@ class GoogleStaticMapBuilder extends Builder implements BuilderInterface
             $properties = get_object_vars($style);
             $elements   = $style->elements;
 
-            unset($properties['name']);
-            unset($properties['elements']);
+            unset($properties['name'], $properties['elements']);
 
             if ($elements) {
                 foreach ($elements as $element) {
@@ -123,7 +122,7 @@ class GoogleStaticMapBuilder extends Builder implements BuilderInterface
                 $this->addParameter('style', sprintf(
                     self::STYLE_FORMAT,
                     $style->name,
-                    $this->format($properties, self::PROPERTY_FORMATs)
+                    $this->format($properties, self::PROPERTY_FORMAT)
                 ));
             }
         }
@@ -154,6 +153,8 @@ class GoogleStaticMapBuilder extends Builder implements BuilderInterface
      * Format Properties
      *
      * @param array $params
+     *
+     * @param       $format
      *
      * @return string
      */
@@ -219,7 +220,7 @@ class GoogleStaticMapBuilder extends Builder implements BuilderInterface
     public function hasNonNullProperties($object)
     {
         foreach (get_object_vars($object) as $property => $value) {
-            if ( ! is_null($value)) {
+            if ($value !== null) {
                 return false;
             }
         }

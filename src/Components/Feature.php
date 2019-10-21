@@ -1,6 +1,6 @@
 <?php
 
-namespace SparksCoding\StaticMaps\Components;
+namespace Viszman\StaticMaps\Components;
 
 
 class Feature extends Styleable
@@ -27,11 +27,11 @@ class Feature extends Styleable
     /**
      * Elements
      *
-     * @param $element
+     * @param $funcParams
      *
      * @return $this
      */
-    public function elements($element)
+    public function elements($funcParams)
     {
         foreach (func_get_args() as $element) {
             $this->elements[] = $element;

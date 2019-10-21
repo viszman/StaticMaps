@@ -1,8 +1,8 @@
 <?php
 
-namespace SparksCoding\StaticMaps\Builders;
+namespace Viszman\StaticMaps\Builders;
 
-use SparksCoding\StaticMaps\StaticMap;
+use Viszman\StaticMaps\StaticMap;
 
 abstract class Builder implements BuilderInterface
 {

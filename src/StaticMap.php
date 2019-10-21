@@ -1,11 +1,11 @@
 <?php
 
-namespace SparksCoding\StaticMaps;
+namespace Viszman\StaticMaps;
 
-use SparksCoding\StaticMaps\Components\Map;
-use SparksCoding\StaticMaps\Components\Marker;
-use SparksCoding\StaticMaps\Components\Feature;
-use SparksCoding\StaticMaps\Components\Path;
+use Viszman\StaticMaps\Components\Map;
+use Viszman\StaticMaps\Components\Marker;
+use Viszman\StaticMaps\Components\Feature;
+use Viszman\StaticMaps\Components\Path;
 
 class StaticMap
 {
@@ -14,15 +14,15 @@ class StaticMap
      */
     public $apiKey;
     /**
-     * @var string
+     * @var \Viszman\StaticMaps\Builders\GoogleStaticMapBuilder
      */
     public $builder;
     /**
-     * @var array SparksCoding\StaticMaps\Components\Path[]
+     * @var array Viszman\StaticMaps\Components\Path[]
      */
     public $path = [];
     /**
-     * @var object SparksCoding\StaticMaps\Components\Map
+     * @var object Viszman\StaticMaps\Components\Map
      */
     public $map;
     /**

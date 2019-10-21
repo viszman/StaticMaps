@@ -1,6 +1,6 @@
 <?php
 
-namespace SparksCoding\StaticMaps\Builders;
+namespace Viszman\StaticMaps\Builders;
 
 
 interface BuilderInterface

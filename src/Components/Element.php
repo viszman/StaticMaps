@@ -1,6 +1,6 @@
 <?php
 
-namespace SparksCoding\StaticMaps\Components;
+namespace Viszman\StaticMaps\Components;
 
 class Element extends Styleable
 {
