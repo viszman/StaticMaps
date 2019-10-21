@@ -7,7 +7,7 @@ A PHP library to make working with the Google Static Maps API (and, eventually, 
 Composer is the recommended method of installation.
  
 ```
-composer require sparkscoding/static-maps
+composer require viszman/static-maps
 ```
 
 ## Quick Example
