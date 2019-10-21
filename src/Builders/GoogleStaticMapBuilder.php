@@ -61,16 +61,17 @@ class GoogleStaticMapBuilder extends Builder implements BuilderInterface
             return;
         }
 
-        $properties = get_object_vars($this->staticMap->path);
-        $points     = $this->staticMap->path->points;
+        foreach ($this->staticMap->path as $path) {
+            $points     = $path->points;
+            $properties = get_object_vars($path);
+            unset($properties['points']);
 
-        unset($properties['points']);
-
-        $this->addParameter('path', sprintf(
-            self::PATH_FORMAT,
-            $this->format($properties, self::PROPERTY_FORMAT),
-            $this->formatPoints($points)
-        ));
+            $this->addParameter('path', sprintf(
+                self::PATH_FORMAT,
+                $this->format($properties, self::PROPERTY_FORMAT),
+                $this->formatPoints($points)
+            ));
+        }
     }
 
     /**

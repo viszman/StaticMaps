@@ -18,9 +18,9 @@ class StaticMap
      */
     public $builder;
     /**
-     * @var object SparksCoding\StaticMaps\Components\Path
+     * @var array SparksCoding\StaticMaps\Components\Path[]
      */
-    public $path;
+    public $path = [];
     /**
      * @var object SparksCoding\StaticMaps\Components\Map
      */
@@ -89,7 +89,7 @@ class StaticMap
      */
     public function addPath(Path $path)
     {
-        $this->path = $path;
+        $this->path[] = $path;
 
         return $this;
     }

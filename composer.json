@@ -8,6 +8,10 @@
         {
             "name": "Matt Sparks",
             "email": "matt@sparkscoding.com"
+        },
+        {
+            "name": "Daniel Klimowicz",
+            "email": "viszman@gmail.com"
         }
     ],
     "autoload": {
